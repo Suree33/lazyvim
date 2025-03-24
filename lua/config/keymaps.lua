@@ -1,3 +1,15 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+
+-- jj to escape
+vim.api.nvim_set_keymap("i", "jj", "<Esc>", {
+  noremap = true,
+  silent = true,
+})
+
+-- jk to escape and save
+vim.api.nvim_set_keymap("i", "jk", "<Esc>:w<CR>", {
+  noremap = true,
+  silent = true,
+})
